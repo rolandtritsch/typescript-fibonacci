@@ -1,0 +1,24 @@
+{
+"name": "fibonacci-calculator",
+"version": "1.0.0",
+"description": "TypeScript implementation of Fibonacci sequence",
+"main": "dist/fibonacci.js",
+"scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "start": "node dist/fibonacci.js"
+},
+"dependencies": {},
+"devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^18.15.11",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.0.4"
+},
+"jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+}
+}
+
