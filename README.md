@@ -1,6 +1,6 @@
-# typescript-fibunacci
+# typescript-fibonacci
 
-Simple node.js implementation to calculate the Fibonacci sequence.
+Simple typescript implementation to calculate the Fibonacci sequence.
 
 To make this work you need to ...
 
