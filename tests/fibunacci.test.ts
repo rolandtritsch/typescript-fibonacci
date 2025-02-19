@@ -26,3 +26,26 @@ describe('fib.recursive', () => {
     expect(() => fib.recursive(-1)).toThrow(/n must be a non-negative integer/);
   });
 });
+
+describe('fib.tailRecursive', () => {
+  test('should return 0 for n = 0', () => {
+    expect(fib.tailRecursive(0)).toBe(0n);
+  });
+
+  test('should return 1 for n = 1', () => {
+    expect(fib.tailRecursive(1)).toBe(1n);
+  });
+
+  test('should correctly calculate fibonacci numbers', () => {
+    expect(fib.tailRecursive(2)).toBe(1n);
+    expect(fib.tailRecursive(3)).toBe(2n);
+    expect(fib.tailRecursive(4)).toBe(3n);
+    expect(fib.tailRecursive(5)).toBe(5n);
+    expect(fib.tailRecursive(6)).toBe(8n);
+    expect(fib.tailRecursive(40)).toBe(102334155n);
+  });
+  
+  test('should throw error for negative numbers', () => {
+    expect(() => fib.tailRecursive(-1)).toThrow(/n must be a non-negative integer/);
+  });
+});

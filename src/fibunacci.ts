@@ -11,4 +11,16 @@ function recursive(n: number): bigint {
   else throw new Error('n must be a non-negative integer');
 }
 
-export { recursive };
+function tailRecursive(n: number): bigint {
+  function tailRecursive(n: number, a: bigint, b: bigint): bigint {
+    if (n === 0) return a;
+    else return tailRecursive(n - 1, b, a + b);
+  }
+
+  if (n === 0) return 0n;
+  else if (n === 1) return 1n;
+  else if (n >= 2) return tailRecursive(n - 1, 0n, 1n) + tailRecursive(n - 2, 1n, 0n);
+  else throw new Error('n must be a non-negative integer');
+}
+
+export { recursive, tailRecursive };
